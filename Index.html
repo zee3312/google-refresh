@@ -31,7 +31,7 @@
     <script type="text/javascript">
         let currentSlide = 0;
         const slides = document.querySelectorAll('.slide, .prayer-time');
-        const slideDuration = 30000; // 30 seconds for each
+        const slideDuration = 15000; // 15 seconds for each
 
         function showNext() {
             // Hide the current slide
@@ -44,7 +44,7 @@
             slides[currentSlide].classList.add('active');
         }
 
-        // Change slide every 30 seconds
+        // Change slide every 15 seconds
         setInterval(showNext, slideDuration);
     </script>
 
