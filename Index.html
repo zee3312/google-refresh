@@ -46,7 +46,17 @@
 
         // Change slide every 15 seconds
         setInterval(showNext, slideDuration);
+
+        // Prevent navigation on iframe click
+        const prayerTimeIframe = document.querySelector('#prayer-time iframe');
+        prayerTimeIframe.addEventListener('load', () => {
+            // Add a click event to the iframe that prevents default action
+            prayerTimeIframe.contentWindow.document.body.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent any link navigation
+            });
+        });
     </script>
 
 </body>
 </html>
+
